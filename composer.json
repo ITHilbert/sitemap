@@ -1,0 +1,40 @@
+{
+    "name": "ithilbert/sitemap",
+    "type": "libary",
+    "license": "MIT",
+    "description": "Erstellt dynamisch eine sitemap.xml",
+    "keywords": [
+        "it-hilbert",
+        "laravel",
+        "homepage",
+        "sitemap"
+    ],
+    "authors": [{
+        "name": "Jörg Hilbert",
+        "homepage": "https://www.it-hilbert.com",
+        "role": "Developer"
+    }],
+    "homepage": "https://www.it-hilbert.com",
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "ITHilbert\\Sitemap\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ITHilbert\\Sitemap\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ITHilbert\\Sitemap\\SitemapServiceProvider"
+            ],
+            "aliases": {
+
+            }
+        }
+    }
+}

@@ -19,7 +19,7 @@
 Füge dein Package als lokale Abhängigkeit hinzu:
 
 ```sh
-composer require your-vendor/my-sitemap
+composer require ithilbert/sitemap
 ```
 
 Falls es sich um ein privates Repository handelt:
@@ -27,7 +27,7 @@ Falls es sich um ein privates Repository handelt:
 "repositories": [
     {
         "type": "vcs",
-        "url": "git@github.com:your-vendor/my-sitemap.git"
+        "url": "git@github.com:ithilbert/sitemap.git"
     }
 ]
 ```
@@ -37,7 +37,7 @@ Falls es sich um ein privates Repository handelt:
 Füge in `config/app.php` unter `providers` hinzu:
 
 ```php
-YourVendor\Sitemap\SitemapServiceProvider::class,
+ITHilbert\Sitemap\SitemapServiceProvider::class,
 ```
 
 ### **3. Konfiguration veröffentlichen**
@@ -82,19 +82,9 @@ return [
 
 ## ✅ Nutzung
 
-### **1. Sitemap-Route registrieren**
+### **1. Sitemap.xml **
 
-Füge in `routes/web.php` hinzu:
-
-```php
-use Illuminate\Support\Facades\Route;
-use YourVendor\Sitemap\SitemapGenerator;
-
-Route::get('/sitemap.xml', function () {
-    return response()->view('sitemap', ['routes' => SitemapGenerator::generate()])
-        ->header('Content-Type', 'application/xml');
-});
-```
+Es wird automatisch die Route 'sitemap.xml' zur Anwendung hinzugefügt.
 
 ### **2. Routen mit Metadaten definieren**
 

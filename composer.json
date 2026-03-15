@@ -1,6 +1,6 @@
 {
     "name": "ithilbert/sitemap",
-    "type": "libary",
+    "type": "library",
     "license": "MIT",
     "description": "Erstellt dynamisch eine sitemap.xml",
     "keywords": [

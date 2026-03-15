@@ -24,6 +24,9 @@ class SitemapServiceProvider extends ServiceProvider
             __DIR__.'/config/sitemap.php' => config_path('sitemap.php'),
         ], 'config');
 
+        // View registrieren
+        $this->loadViewsFrom(__DIR__.'/views', 'sitemap');
+
         // View veröffentlichen
         $this->publishes([
             __DIR__.'/views/sitemap.blade.php' => resource_path('views/sitemap.blade.php'),
